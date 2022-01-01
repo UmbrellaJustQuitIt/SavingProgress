@@ -2,6 +2,7 @@ package com.example.savingprogress;
 
 import static com.example.savingprogress.Survey.list;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -18,6 +19,8 @@ public class Questions extends AppCompatActivity {
     int index = 0;
     TextView card_question, optiona, optionb, optionc, optiond;
     CardView cardOA, cardOB, cardOC, cardOD;
+    int correctCount = 0;
+    int wrongCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,5 +59,38 @@ public class Questions extends AppCompatActivity {
         cardOC = findViewById(R.id.cardC);
         cardOD = findViewById(R.id.cardD);
 
+    }
+
+    public void Correct() {
+        correctCount++;
+        index++;
+        modelclass = list.get(index);
+        setAllData();
+    }
+
+    public void Wrong() {
+        wrongCount++;
+        index++;
+        modelclass = list.get(index);
+        setAllData();
+    }
+
+    private void TotalScore() {
+        Intent intent = new Intent(Questions.this, TotalScore.class);
+        startActivity(intent);
+    }
+
+    public void enableButton() {
+        cardOA.setClickable(true);
+        cardOB.setClickable(true);
+        cardOC.setClickable(true);
+        cardOD.setClickable(true);
+    }
+
+    public void disableButton() {
+        cardOA.setClickable(false);
+        cardOB.setClickable(false);
+        cardOC.setClickable(false);
+        cardOD.setClickable(false);
     }
 }
