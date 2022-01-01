@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Survey extends AppCompatActivity {
 
     private Button button2;
-    ArrayList<Modelclass> list;
+    public static ArrayList<Modelclass> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
