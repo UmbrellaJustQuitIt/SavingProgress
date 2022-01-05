@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bluesurvey" />
-    
+
     <RelativeLayout
         android:id="@+id/r12"
         android:layout_marginTop="70sp"
@@ -30,7 +30,7 @@
             app:cpb_round_border="false" />
 
         <TextView
-            android:id="@+id/resultText"
+            android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -40,5 +40,13 @@
 
     </RelativeLayout>
 
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r12"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"/>
 
 </RelativeLayout>
