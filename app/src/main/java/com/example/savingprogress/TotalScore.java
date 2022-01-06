@@ -19,11 +19,6 @@ public class TotalScore extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.totalscore);
 
-        count0.getIntent().getIntExtra("count0", 0);
-        count1.getIntent().getIntExtra("count1", 0);
-        count2.getIntent().getIntExtra("count2", 0);
-        count3.getIntent().getIntExtra("count3", 0);
-
         circularProgressBar = findViewById(R.id.circularProgressBar);
         score = findViewById(R.id.score);
         resultText = findViewById(R.id.resultText);
