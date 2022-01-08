@@ -10,44 +10,23 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bluesurvey" />
 
-    <RelativeLayout
-        android:id="@+id/r12"
-        android:layout_marginTop="70sp"
-        android:layout_width="170sp"
-        android:layout_height="170sp"
-        android:layout_centerHorizontal="true">
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Total Score :"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
 
-        <com.mikhaellopez.circularprogressbar.CircularProgressBar
-            android:id="@+id/circularProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cpb_background_progressbar_color="@color/royalblue"
-            app:cpb_background_progressbar_width="10dp"
-            app:cpb_progress_direction="to_right"
-            app:cpb_progressbar_color="@color/darkred"
-            app:cpb_progressbar_width="10dp"
-            app:cpb_progress_max="8"
-            app:cpb_round_border="false" />
-
-        <TextView
-            android:id="@+id/score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:layout_centerInParent="true"
-            android:text="5/8"/>
-
-    </RelativeLayout>
-
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/r12"
-            android:layout_marginTop="80dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="411dp"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/returnbtn"
@@ -55,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="Return"
         android:layout_marginTop="100dp"
-        android:layout_below="@+id/resultText"
+        android:layout_below="@+id/score"
         android:layout_centerHorizontal="true"/>
 
-</RelativeLayout>
+    </RelativeLayout>

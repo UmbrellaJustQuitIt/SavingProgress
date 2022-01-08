@@ -19,10 +19,8 @@ public class Questions extends AppCompatActivity {
     int index = 0;
     TextView card_question, optiona, optionb, optionc, optiond;
     CardView cardOA, cardOB, cardOC, cardOD;
-    int count0 = 0;
-    int count1 = 0;
-    int count2 = 0;
-    int count3 = 0;
+    int correctCount = 0;
+    int wrongCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,49 +60,31 @@ public class Questions extends AppCompatActivity {
         cardOD = findViewById(R.id.cardD);
 
     }
-    public void Count0() {
-        count0++;
+
+    public void Correct() {
+        correctCount++;
         index++;
         modelclass = list.get(index);
         setAllData();
     }
 
-    public void Count1() {
-        count1++;
-        index++;
-        modelclass = list.get(index);
-        setAllData();
-    }
-
-    public void Count2() {
-        count2++;
-        if(index > list.size() + 2) {
+    public void Wrong() {
+        wrongCount++;
+        if (index < list.size() - 0)
+        {
             index++;
             modelclass = list.get(index);
             setAllData();
         }
         else{
             TotalScore();
-        }
     }
-
-    public void Count3() {
-        count3++;
-        if(index > list.size() + 3) {
-            index++;
-            modelclass = list.get(index);
-            setAllData();
-        }
-        else{
-            TotalScore();
-        }
-    }
+}
 
     private void TotalScore() {
         Intent intent = new Intent(Questions.this, TotalScore.class);
-        intent.putExtra("count1", count1);
-        intent.putExtra("count2", count2);
-        intent.putExtra("count3", count3);
+        intent.putExtra("correct", correctCount);
+        intent.putExtra("wrong", wrongCount);
         startActivity(intent);
     }
 
