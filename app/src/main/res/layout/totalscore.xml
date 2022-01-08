@@ -14,7 +14,6 @@
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:text="Total Score :"
         android:textColor="@color/white"
         android:textSize="32sp" />
@@ -32,9 +31,12 @@
         android:id="@+id/returnbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Return"
-        android:layout_marginTop="100dp"
         android:layout_below="@+id/score"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="307dp"
+        android:layout_marginEnd="318dp"
+        android:layout_marginBottom="333dp"
+        android:text="Return" />
 
-    </RelativeLayout>
+</RelativeLayout>
